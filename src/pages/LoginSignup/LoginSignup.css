@@ -1,0 +1,240 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Background Animation */
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-animation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    animation: float 15s infinite linear;
+}
+
+.circle-1 {
+    width: 150px;
+    height: 150px;
+    top: 10%;
+    left: 15%;
+    background: rgba(100, 210, 255, 0.1);
+}
+
+.circle-2 {
+    width: 200px;
+    height: 200px;
+    bottom: 15%;
+    right: 10%;
+    background: rgba(255, 150, 100, 0.1);
+    animation-delay: 2s;
+}
+
+.circle-3 {
+    width: 100px;
+    height: 100px;
+    top: 60%;
+    left: 25%;
+    background: rgba(150, 255, 150, 0.1);
+    animation-delay: 4s;
+}
+
+.circle-4 {
+    width: 250px;
+    height: 250px;
+    top: 30%;
+    right: 20%;
+    background: rgba(200, 150, 255, 0.1);
+    animation-delay: 6s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(180deg);
+    }
+    100% {
+        transform: translateY(0) rotate(360deg);
+    }
+}
+
+/* Form Container */
+.loginsignup-container {
+    width: 100%;
+    max-width: 420px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    padding: 40px;
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.loginsignup-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, #4d4c4c 0%, #7a7474 100%);
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.auth-header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.auth-header p {
+    color: #7f8c8d;
+    font-size: 15px;
+}
+
+/* Form Elements */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    position: relative;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #e0e6ed;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #2c3e50;
+    transition: all 0.3s ease;
+    background: #f8fafc;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #0a6abe;
+    box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.2);
+    background: white;
+}
+
+.input-group input::placeholder {
+    color: #a0aec0;
+}
+
+.password-group {
+    display: flex;
+    align-items: center;
+}
+
+.password-group input {
+    padding-right: 50px;
+}
+
+.toggle-btn {
+    position: absolute;
+    right: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #a0aec0;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.toggle-btn:hover {
+    color: #000000;
+}
+
+.toggle-btn svg {
+    stroke-width: 2;
+}
+
+/* Button */
+.auth-btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(90deg, #525252 0%, #1f1e1e 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3);
+}
+
+.auth-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(79, 172, 254, 0.4);
+}
+
+/* Footer */
+.auth-footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.auth-footer p {
+    color: #7f8c8d;
+    font-size: 14px;
+}
+
+.auth-footer span {
+    color: #5406bb;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: all 0.3s ease;
+}
+
+.auth-footer span:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .loginsignup-container {
+        padding: 30px 20px;
+        margin: 20px;
+    }
+    
+    .auth-header h1 {
+        font-size: 24px;
+    }
+}

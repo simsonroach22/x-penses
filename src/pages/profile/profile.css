@@ -1,0 +1,17 @@
+.profile-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.profile-sidebar{
+    background: rgb(207, 95, 95);
+    width: 30%;
+}
+
+.profile-dashboard{
+    background: rgb(94, 94, 94);
+    width: 70%;
+
+}

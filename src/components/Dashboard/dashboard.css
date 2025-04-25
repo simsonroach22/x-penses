@@ -1,0 +1,282 @@
+/* Dashboard Container */
+.dashboard-container {
+    background: #fcfcfc; /* Dark background */
+    color: #ffffff;
+    min-height: 100vh;
+    
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Typography */
+.dashboard-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.5px;
+    color: #000000;
+}
+
+.module-container{
+    padding: 20px;
+}
+
+.module-container h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.module-container h2 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+    color: #e0e0e0;
+}
+
+.module-container p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #b0b0b0;
+}
+
+/* Navigation Buttons */
+.dashboard-btns {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.dashboard-btns input {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 2rem;
+    cursor: pointer;
+    border: 2px solid #333;
+    background-color: #ffffff;
+    color: #121212;
+    transition: all 0.3s ease;
+}
+
+.dashboard-btns input:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-1px);
+}
+
+/* Module Grid */
+.module-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.module-container > div {
+    background: #1e1e1e;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.module-container > div:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Special Span Modules */
+.overview-container, 
+.recent-expenses-container {
+    grid-column: span 2;
+}
+
+/* Expenses List */
+.expenses-list-view {
+    margin: 1.5rem 0;
+}
+
+.expenses-list-view ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+}
+
+.expenses-list-view li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: #252525;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+/* Graph Controls */
+.graph-toggle {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.graph-toggle button {
+    padding: 0.75rem 1.5rem;
+    background: #252525;
+    color: #ffffff;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.graph-toggle button:hover {
+    background: #333;
+}
+
+.graph-toggle button.active {
+    background: #ffffff;
+    color: #121212;
+}
+
+.graph-container {
+    margin-top: 1.5rem;
+    height: 300px;
+}
+
+/* Progress Bar */
+.progress-container {
+    width: 100%;
+    height: 1rem;
+    background-color: #333;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    border-radius: 0.5rem;
+    transition: width 0.5s ease;
+    position: relative;
+}
+
+.progress-text {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+/* Color variations */
+.progress-bar.low { background-color: #ff5252; }
+.progress-bar.medium { background-color: #ffab40; }
+.progress-bar.high { background-color: #4CAF50; }
+
+/* Savings Goals */
+.savings-progress-container {
+    background: #252525;
+    padding: 1.5rem;
+    grid-row: 3;
+    border-radius: 0.75rem;
+
+}
+
+.goal-item {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #333;
+}
+
+.goal-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.amount-display {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin: 0.5rem 0;
+}
+
+/* Form Styles */
+.add-amount-form {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.amount-input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    background: #333;
+    border: 1px solid #444;
+    border-radius: 0.5rem;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: border 0.3s;
+}
+
+.amount-input:focus {
+    border-color: #ffffff;
+    outline: none;
+}
+
+.add-button {
+    padding: 0.75rem 1.5rem;
+    background: #ffffff;
+    color: #121212;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.add-button:hover {
+    background: #e0e0e0;
+    transform: translateY(-1px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.module-container > div {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .overview-container, 
+    .recent-expenses-container {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-container {
+        padding: 1.5rem;
+    }
+    
+    .dashboard-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .add-amount-form {
+        flex-direction: column;
+    }
+    
+    .dashboard-btns {
+        flex-direction: column;
+    }
+}
+

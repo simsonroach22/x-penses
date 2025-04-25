@@ -1,0 +1,220 @@
+/* Main Container Styles */
+#add-expenses-title {
+    font-size: 50px;
+    margin-top: 50px;
+    margin-left: 10px;
+    color: #333;
+    text-align: center;
+}
+
+.add-expenses-container {
+
+    background: rgb(44, 44, 44);
+    font-family: Arial, sans-serif;
+}
+
+.add-expenses-content{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    
+}
+
+/* Form Styles */
+.add-expenses-container form {
+    margin: 20px 20px 20px 30px;
+    padding: 30px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-expenses-container form label {
+    font-size: 20px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.add-expenses-container form input {
+    width: 400px;
+    padding: 12px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border 0.3s;
+}
+
+.add-expenses-container form input:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/* Date Input Specific Styles */
+.add-expenses-container form input[type="date"] {
+    padding: 11px;
+}
+
+/* Button Styles */
+.add-expenses-container form button {
+    width: 400px;
+    padding: 15px;
+    margin: 30px auto;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+}
+
+.add-expenses-container form button:hover {
+    background-color: #45a049;
+}
+
+.add-expenses-container form button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+/* Form Group Layout */
+.form-group {
+    margin-bottom: 25px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #add-expenses-title {
+        font-size: 36px;
+        margin-top: 30px;
+    }
+
+    .add-expenses-container form {
+        margin: 15px;
+        padding: 20px;
+    }
+
+    .add-expenses-container form input,
+    .add-expenses-container form button {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .add-expenses-container form label {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    #add-expenses-title {
+        font-size: 28px;
+        margin-top: 20px;
+    }
+
+    .add-expenses-container form {
+        padding: 15px;
+        border-width: 1px;
+    }
+
+    .add-expenses-container form input {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .add-expenses-container form button {
+        padding: 12px;
+        font-size: 16px;
+    }
+}
+
+/* Monthly Expenses Section */
+.monthly-expenses-section {
+    margin-top: 40px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.month-group {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+.month-group:last-child {
+    border-bottom: none;
+}
+
+.month-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.month-header h4 {
+    margin: 0;
+    color: #333;
+}
+
+.month-total, .month-average {
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.month-total {
+    background-color: #e3f2fd;
+    color: #1976d2;
+}
+
+.month-average {
+    background-color: #e8f5e9;
+    color: #388e3c;
+}
+
+.expenses-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.expense-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 8px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+}
+
+.expense-item:hover {
+    background-color: #f0f0f0;
+}
+
+.expense-date {
+    color: #666;
+    min-width: 100px;
+}
+
+.expense-type {
+    flex-grow: 1;
+    padding: 0 15px;
+}
+
+.expense-amount {
+    font-weight: bold;
+    color: #d32f2f;
+}

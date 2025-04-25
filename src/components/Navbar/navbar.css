@@ -1,0 +1,46 @@
+.navbar-container{
+    width: 100%;
+    height: max-content;
+    background: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.navbar-container .logo-container{
+    padding: 20px;
+    margin: 20px;    
+}
+
+.navbar-container .logout-button{
+    margin: 20px;
+    padding: 20px;
+}
+
+.navbar-container .logout-button input{
+    padding: 10px 30px;
+    cursor: pointer;
+    border-radius: 20PX;
+    transition: .3s;
+}
+
+.navbar-container .logout-button input:hover{
+    background: rgb(221, 220, 220);
+    transform: translateY(-5px);
+
+}
+
+.navbar-container .logout-button{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.navbar-container .logout-button img{
+    background: white;
+    height: 40px;
+    width: 40px;
+    margin: auto;
+    border-radius: 50%;
+    cursor: pointer;
+}
